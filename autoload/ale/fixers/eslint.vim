@@ -72,9 +72,6 @@ function! ale#fixers#eslint#ApplyFixForVersion(buffer, version) abort
         \}
     endif
 
-    echom "Fixer"
-    echom ale#handlers#eslint#GetCwd(a:buffer)
-
     return {
     \   'cwd': ale#handlers#eslint#GetCwd(a:buffer),
     \   'command': ale#node#Executable(a:buffer, l:executable)
